@@ -2,3 +2,98 @@
     margin: 0;
     padding: 0;
 }
+
+/* 更改鼠标选中文字样式 */
+/* webkit, opera, IE9 */
+::selection {
+    background: #ba778a;
+    color: #fff;
+}
+
+/* mozilla firefox */
+::-moz-selection {
+    background: #ba778a;
+    color: #fff;
+}
+
+body {
+    background-color: #fff;
+    font: 10.5px/1.7 'Times New Roman', arial;
+    color: #000;
+}
+
+img {
+    /* border 0 照顾低版本浏览器 如果 图片外面包含了链接会有边框的问题 */
+    border: 0;
+    /* 取消图片底侧有空白缝隙的问题 */
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* 版心 */
+.w {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.header {
+    padding-top: 29px;
+    margin-bottom: 33px;
+}
+
+.header h1 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.description {
+    margin-top: 9px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.article {
+    padding-bottom: 80px;
+    /* text-align: center; */
+}
+
+.article h2 {
+    font-size: 20px;
+    /* 外边距合并，上外边距无效 */
+    margin: 12px 0;
+}
+
+.article p {
+    border-top: 1px solid #ccc;
+    margin-top: 18px;
+    padding-top: 18px;
+    letter-spacing: 1px;
+    font-family: SimSun, arial;
+    /* font-weight: 400; */
+}
+
+.post_footer {
+    margin-top: 30px;
+    text-align: center;
+    font: 10px/1.7 arial;
+    letter-spacing: 1px;
+}
+
+.post_footer a {
+    color: #888;
+}
+
+.footer {
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.footer a {
+    text-decoration: underline;
+}
