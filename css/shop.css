@@ -1,0 +1,95 @@
+/* 引入iconfont字体 */
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.eot');
+    src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/iconfont.woff2') format('woff2'),
+        url('../fonts/iconfont.woff') format('woff'),
+        url('../fonts/iconfont.ttf') format('truetype'),
+        url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+
+/* 版心 */
+.w {
+    width: 940px;
+    margin: 0 auto;
+}
+
+/* 左浮动 */
+.fl {
+    float: left;
+}
+
+/* 右浮动 */
+.fr {
+    float: right;
+}
+
+/* header头部部分
+    用固定定位固定住 */
+header {
+    height: 50px;
+}
+
+
+.search-btn {
+    /* 绝对/固定定位不能与浮动一起用，会使浮动失效 */
+    /* float: left; */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: url("../images/svg/icon_search_white.svg") no-repeat center/26px #161616;
+    border-radius: 4px;
+
+    /* 引入iconfont字体的做法，但图标不一致.
+    font-family: "iconfont" !important;
+    font-weight: 900;
+    text-align: center;
+    background-color: #161616;
+    font-size: 24px;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; */
+}
+
+.cart-btn {
+    position: fixed;
+    top: 20px;
+    right: 17px;
+    width: 50px;
+    height: 50px;
+    background: url("../images/svg/icon-cart.svg") no-repeat center/26px #161616;
+    border-radius: 4px;
+}
+
+.login-btn {
+    position: fixed;
+    top: 20px;
+    right: 78px;
+    width: 88px;
+    height: 50px;
+    /* line-height: 50px; */
+    background-color: #161616;
+    border-radius: 4px;
+}
+
+.login-btn-text {
+    letter-spacing: 0.08em;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+}
+
+/* logo部分 */
+.logo {
+    width: 575px;
+    height: 64px;
+}
+
+.logo a {
+    display: block;
+    padding-top: 91px;
+    text-align: center;
+}
