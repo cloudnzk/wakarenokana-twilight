@@ -25,13 +25,7 @@
     float: right;
 }
 
-/* header头部部分
-    用固定定位固定住 */
-header {
-    /* height: 50px; */
-}
-
-
+/* header部分 */
 .search-btn {
     /* 绝对/固定定位不能与浮动一起用，会使浮动失效 */
     /* float: left; */
@@ -42,16 +36,6 @@ header {
     height: 50px;
     background: url("../images/svg/icon_search_white.svg") no-repeat center/26px #161616;
     border-radius: 4px;
-
-    /* 引入iconfont字体的做法，但图标不一致.
-    font-family: "iconfont" !important;
-    font-weight: 900;
-    text-align: center;
-    background-color: #161616;
-    font-size: 24px;
-    color: #fff;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; */
 }
 
 .cart-btn {
@@ -76,15 +60,17 @@ header {
 }
 
 .login-btn-text {
-    letter-spacing: 0.08em;
     font-size: 14px;
     text-align: center;
+    /* line-height: 50px; */
+    letter-spacing: 0.08em;
     color: #fff;
 }
 
 /* logo部分 */
 .logo {
     width: 575px;
+
     padding-top: 91px;
 }
 
@@ -96,14 +82,15 @@ header {
 }
 
 .nav {
-    /* width: 100%; */
     height: 29px;
+    /* 这里不能设置margin-right，因为浮动的子元素也设置了，会出现高度塌陷问题 */
+    /* margin: 60px 0 40px 0; */
     margin-top: 60px;
     margin-bottom: 40px;
 }
 
 .nav ul li {
-    /* 记得要在后面清除浮动，不然会影响后面的标准流 */
+    /* 记得要在父元素后面清除浮动，不然会影响后面的标准流 */
     float: left;
     margin-right: 20px;
 }
@@ -120,15 +107,19 @@ header {
 }
 
 .shangpin ul li {
-    /* overflow: hidden; */
+    overflow: hidden;
     float: left;
     margin-right: 60px;
-    padding-bottom: 68px;
+    margin-bottom: 64px;
     width: 185px;
 }
 
 .shangpin ul li:nth-child(4n) {
     margin-right: 0;
+}
+
+.shangpin ul li:nth-child(4n+1) {
+    clear: left;
 }
 
 .cd-image {
@@ -141,6 +132,8 @@ header {
     font-size: 13px;
     line-height: 1.6em;
     letter-spacing: 0.03em;
+    /* 强制英文单词断行 */
+    word-break: break-all;
 }
 
 .item-price-number {
@@ -149,21 +142,104 @@ header {
 }
 
 .sold-out {
-    /* 在这里定义高度，会出现高度塌陷问题 */
+    /* 浮动元素高度不一致会发生错位，可以为换行的第一个元素清除浮动 */
     /* height: 20px; */
-    /* padding: 0 7px; */
-    /* margin: 8px 4px 0 0; */
-    text-align: center;
+    width: 70px;
     border-radius: 3px;
     background-color: #999;
+}
+
+.sold-out p {
+    font-size: 10px;
+    /* 设置行高大一点让文字撑开 */
+    line-height: 20px;
+    text-align: center;
     color: #fff;
     letter-spacing: 0.08em;
-    font-size: 10px;
-    /* line-height: 20px; */
 }
 
 .copyright {
+    position: relative;
+    /* top: 0;
+    left: 0; */
     margin-top: 60px;
     margin-bottom: 130px;
-    text-align: center;
+    height: 38px;
+    /* text-align: center; */
+}
+
+.more-info ul li {
+    float: left;
+    margin: 0 5px;
+}
+
+.more-info ul li:nth-child(n+4) {
+    float: right;
+    margin: 0 8px;
+}
+
+.footer-email {
+    display: block;
+    width: 38px;
+    height: 38px;
+    background: url("../images/svg/icon-mail.svg") no-repeat center/18px #161616;
+    border-radius: 3px;
+}
+
+.footer-info {
+    display: block;
+    width: 38px;
+    height: 38px;
+    background: url("../images/svg/icon-info.svg") no-repeat center/18px #161616;
+    border-radius: 3px;
+}
+
+.footer-sns {
+    display: block;
+    width: 38px;
+    height: 38px;
+    background: url("../images/svg/icon-sns.svg") no-repeat center/18px #161616;
+    border-radius: 3px;
+}
+
+.footer_copyright-link {
+    /* 用定位使同一行的元素底部对齐 */
+    position: absolute;
+    top: 10px;
+    left: 380px;
+    display: inline-block;
+    overflow: hidden;
+    height: 28px;
+    width: 177px;
+    /* padding-top: 10px; */
+    background: url(../images/svg/icon-footer-logo.svg) no-repeat center;
+}
+
+
+.footer-twitter {
+    /* position: absolute;
+    top: 7px;
+    right: 185px; */
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 10px;
+    border-radius: 50%;
+    background: url(../images/svg/icon_twitter.svg) no-repeat center/18px #9ea5b2;
+}
+
+.footer-ins {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: url(../images/svg/icon_instagram.svg) no-repeat center/18px #9ea5b2;
+}
+
+.footer-home {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: url(../images/svg/icon_home.svg) no-repeat center/18px #9ea5b2;
 }
